@@ -22,16 +22,13 @@ public class GetLine {
         System.out.println(lineList);
     }
     public void createFoldersFileInLine(){
-        if(lineList.size()==1){
-        fileSystem.add(new Folder(lineList.get(0)));}
-        if(lineList.size()==2){
-        fileSystem.get(0).subFolder(new Folder(lineList.get(1)));}
-        if(lineList.size()>2){
 
+        fileSystem.add(new Folder(lineList.get(0)));
+        fileSystem.get(0).subFolder(new Folder(lineList.get(1)));
         for(int i=2; i<lineList.size();i++) {
               fileSystem.get(0).catalog.get(0).subFolder(new Folder(lineList.get(i)));}
         }
-    }
+
    /* public void createFoldersFileOnLineTest(){
         Folder root=new Folder("root");
         fileSystem.add(root);
