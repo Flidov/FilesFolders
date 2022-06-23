@@ -1,11 +1,28 @@
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
-        GetLine program1=new GetLine();
-        program1.setLineList();
-       // program1.print();
-        program1.createFoldersFileInLine();
-        program1.printLine();
-        //program1.createFoldersFileOnLineTest();
-       // program1.printLine();
+        Scanner sc = new Scanner(System.in);
+        GetLine program1 = new GetLine();
+        boolean run=true;
+        System.out.println("Выберите \n 1 для ввода строки \n 2 для вывода на экран ");
+        while (run) {
+            switch (sc.nextInt()) {
+                case 1:
+                    program1.setLineList();
+                    program1.createFoldersInLine();
+                    program1.create();
+                    program1.createFolders();
+                    program1.addFileToFolder();
+                    break;
+                case 2:
+                    program1.printFileSystem();
+                    break;
+                case 3:
+                    run = false;
+
+            }
+        }
     }
+
 }
