@@ -12,12 +12,17 @@ public class Test {
                     program1.createFoldersInLine();
                     program1.create();
                     program1.createFolders();
+                    program1.addFileToFolder();
                     break;
                 case 2:
-                    program1.printLine();
+                    program1.printFileSystem();
                     break;
                 case 3:
+                    program1.createFoldersFileOnLineTest();
+                    break;
+                case 4:
                     run = false;
+
             }
         }
     }
